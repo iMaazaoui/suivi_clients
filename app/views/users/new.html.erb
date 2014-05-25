@@ -1,0 +1,19 @@
+<div class="col-md-6 col-md-offset-3 panel panel-default">
+  <div class="panel-body">
+    <h2>Create an Account</h2>
+      <%= form_for @user, url: {action: "create"} do |f| %>
+        <%= f.label :nom %>
+        <%= f.text_field :nom, class: "form-control" %>
+        <%= f.label :prenom %>
+        <%= f.text_field :prenom, class: "form-control" %>
+        <%= f.label :email %>
+        <%= f.text_field :email, class: "form-control" %>
+        <%= f.label :mot_de_passe %>
+        <%= f.password_field :password, class: "form-control" %>
+        <%= f.label :confirmation %>
+        <%= f.password_field :password_confirmation, class: "form-control" %>
+        
+        <div><%= f.submit "Enregistrer", class: 'btn btn-primary btn-block btn-lg' %></div>
+      <% end %>
+  </div>
+</div>
